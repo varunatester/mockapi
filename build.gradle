@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'idea'
+
+//sourceCompatibility = 1.5
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile(group: 'org.testng', name: 'testng', version: '6.8.8')
+    testCompile(group: 'com.jayway.restassured', name: 'rest-assured', version: '2.3.3')
+    testCompile(group: 'org.codehaus.jackson', name: 'jackson-mapper-asl', version: '1.9.13')
+    testCompile(group: 'org.mock-server', name: 'mockserver-netty', version: '3.9.9')
+    testCompile(group: 'org.mock-server', name: 'mockserver-client-java', version: '2.9')
+    testCompile(group: 'com.googlecode.lambdaj', name: 'lambdaj', version: '2.3.3')
+
+}
+
+
