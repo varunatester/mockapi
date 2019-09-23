@@ -1,5 +1,8 @@
 package entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.junit.Ignore;
+
 import static org.testng.Assert.assertEquals;
 
 /**
@@ -8,6 +11,8 @@ import static org.testng.Assert.assertEquals;
 public class GetAddressByIdResponse {
 
     private String addressId;
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    private String apartmentNo;
     private String title;
     private String firstName;
     private String lastName;
@@ -87,6 +92,14 @@ public class GetAddressByIdResponse {
 
     public void setAddressId(String addressId) {
         this.addressId = addressId;
+    }
+
+    public String getApartmentNo() {
+        return apartmentNo;
+    }
+
+    public void setApartmentNo(String apartmentNo) {
+        this.apartmentNo = apartmentNo;
     }
 
     public void assertAddress(CreateAddressRequest request) {

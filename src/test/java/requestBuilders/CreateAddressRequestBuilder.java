@@ -18,10 +18,10 @@ public class CreateAddressRequestBuilder {
         request.setLastName("Srivastava");
 
         request.setLine1("300 Front St West");
-        request.setLine2("5130 E Palmetto St Box 147");
+        request.setLine2("Blue building");
         request.setLine3("Box");
-        request.setCity("Florence");
-        request.setState("SC");
+        request.setCity("Toronto");
+        request.setState("Ontario");
     }
 
     public CreateAddressRequest build() {

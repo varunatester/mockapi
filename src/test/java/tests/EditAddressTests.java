@@ -21,8 +21,8 @@ public class EditAddressTests extends AddressBaseTest{
                 .getAddressId();
 
         CreateAddressRequest editRequest = new CreateAddressRequestBuilder()
-                .withFirstName("Varuna")
-                .withLastName("Srivastava").build();
+                .withFirstName("Star")
+                .withLastName("Canada").build();
 
         CreateAddressResponse editAddressResponse = editAddress(editRequest, addressId);
         String editedAddressId = editAddressResponse.getAddressId();

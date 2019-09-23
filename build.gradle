@@ -8,6 +8,19 @@ version = '1.0'
 repositories {
     mavenCentral()
 }
+task SanityTests(type: Test) {
+    dependsOn clean, compileTestJava
+    useTestNG {
+        outputDirectory = file("$buildDir/SanityTestsResults")
+        parallel = "classes"
+        threadCount = 1
+        useDefaultListeners = false
+    }
+}
+test {
+    useTestNG()
+    scanForTestClasses = false //this one
+}
 dependencies {
     testCompile(group: 'org.testng', name: 'testng', version: '6.8.8')
     testCompile(group: 'com.jayway.restassured', name: 'rest-assured', version: '2.3.3')

@@ -3,26 +3,26 @@
   "address": [
     {
       "addressId": "1",
-      "apartmentNo": "3910",
+
       "title": "Mrs",
       "firstName": "Varuna",
       "lastName": "Srivastava",
       "line1": "300 Front St West",
-      "line2": "5130 E Palmetto St Box 147",
+      "line2": "Blue building",
       "line3": "Box",
-      "city": "Florence",
-      "state": "SC"
+      "city": "Toronto",
+      "state": "Ontario"
     },
     {
       "addressId": "11",
-      "title": "Mr",
-      "firstName": "Varuna",
-      "lastName": "Srivastava",
-      "line1": "Francis Marion University",
-      "line2": "5130 E Palmetto St Box 147",
+      "title": "Mrs",
+      "firstName": "Star",
+      "lastName": "Canada",
+      "line1": "300 Front St West",
+      "line2": "Blue building",
       "line3": "Box",
-      "city": "Florence",
-      "state": "SC"
+      "city": "Toronto",
+      "state": "Ontario"
     }
   ]
 }
