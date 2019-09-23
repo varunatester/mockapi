@@ -3,10 +3,11 @@
   "address": [
     {
       "addressId": "1",
-      "title": "Mr",
-      "firstName": "Richard",
-      "lastName": "Parker",
-      "line1": "Francis Marion University",
+      "apartmentNo": "3910",
+      "title": "Mrs",
+      "firstName": "Varuna",
+      "lastName": "Srivastava",
+      "line1": "300 Front St West",
       "line2": "5130 E Palmetto St Box 147",
       "line3": "Box",
       "city": "Florence",

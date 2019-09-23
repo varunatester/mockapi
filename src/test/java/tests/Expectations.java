@@ -34,7 +34,6 @@ public class Expectations {
     private void expectationForCreateAddressJson() {
 
         String responseString = "{\"addressId\":\"1\"}";
-
         mockServer
                 .when(
                         request()

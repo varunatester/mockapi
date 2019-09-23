@@ -19,10 +19,13 @@ public class GetAddressTests extends AddressBaseTest {
     @Test
     public void shouldCreateAndGetAddress() throws IOException {
 
-        CreateAddressRequest request = new CreateAddressRequestBuilder().build();
+        CreateAddressRequest request = new CreateAddressRequestBuilder()
+                .withApartmentNo("3910")
+                .build();
         CreateAddressResponse addAddressResponse = addAddress(request);
         String expectedAddressId = addAddressResponse.getAddressId();
         assertNotNull(expectedAddressId);
+
         GetAddressByIdResponse getAddressResponse = getAddressById(expectedAddressId);
         assertEquals(getAddressResponse.getAddressId(), expectedAddressId);
         getAddressResponse.assertAddress(request);

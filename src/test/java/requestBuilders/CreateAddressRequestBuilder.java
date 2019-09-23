@@ -1,6 +1,7 @@
 package requestBuilders;
 
 import entities.CreateAddressRequest;
+import entities.LocalAddress;
 
 /**
  * Created by varuna on 8/20/15.
@@ -10,13 +11,13 @@ public class CreateAddressRequestBuilder {
     CreateAddressRequest request;
 
     public CreateAddressRequestBuilder() {
-        request = new CreateAddressRequest();
+        request = new LocalAddress();
 
-        request.setTitle("Mr");
-        request.setFirstName("Richard");
-        request.setLastName("Parker");
+        request.setTitle("Mrs");
+        request.setFirstName("Varuna");
+        request.setLastName("Srivastava");
 
-        request.setLine1("Francis Marion University");
+        request.setLine1("300 Front St West");
         request.setLine2("5130 E Palmetto St Box 147");
         request.setLine3("Box");
         request.setCity("Florence");
@@ -34,6 +35,10 @@ public class CreateAddressRequestBuilder {
 
     public CreateAddressRequestBuilder withLastName(String lastName) {
         request.setLastName(lastName);
+        return this;
+    }
+    public CreateAddressRequestBuilder withApartmentNo(String apartmentNo) {
+        request.setApartmentNo(apartmentNo);
         return this;
     }
 }
