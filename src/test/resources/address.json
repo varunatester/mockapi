@@ -3,7 +3,18 @@
   "address": [
     {
       "addressId": "1",
-
+      "title": "Mrs",
+      "firstName": "Varuna",
+      "lastName": "Srivastava",
+      "line1": "300 Front St West",
+      "line2": "Blue building",
+      "line3": "Box",
+      "city": "Toronto",
+      "state": "Ontario"
+    },
+    {
+      "apartmentNo":"3910",
+      "addressId": "1",
       "title": "Mrs",
       "firstName": "Varuna",
       "lastName": "Srivastava",

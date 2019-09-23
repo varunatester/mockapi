@@ -26,7 +26,7 @@ public class GetAddressTests extends AddressBaseTest {
         String expectedAddressId = addAddressResponse.getAddressId();
         assertNotNull(expectedAddressId);
 
-        GetAddressByIdResponse getAddressResponse = getAddressById(expectedAddressId);
+        GetAddressByIdResponse getAddressResponse = getAddressById("3910");
         assertEquals(getAddressResponse.getAddressId(), expectedAddressId);
         getAddressResponse.assertAddress(request);
     }

@@ -27,6 +27,7 @@ public class Expectations {
         expectationForGetAddressJsonAfterEdit();
         expectationForCreateAddressJsonForDelete();
         expectationForDeleteAddressJsonForDelete("1");
+        expectationForGetAddressByApartmentNo();
 
     }
 
@@ -97,6 +98,26 @@ public class Expectations {
                 .when(
                         request()
                                 .withPath("/addresses/11")
+                                .withQueryStringParameter(new Parameter("format", "json"))
+                                .withMethod("GET"))
+                .respond(
+                        response()
+                                .withStatusCode(200)
+                                .withHeaders(
+                                        new Header("Content-Type", "application/json")
+                                )
+                                .withBody(responseString));
+    }
+
+    private void expectationForGetAddressByApartmentNo() {
+        Object o = from(new File("build/resources/test/address.json"))
+                .get("address.findAll {r -> r.apartmentNo == '3910'}[0]");
+        String responseString = RequestHelper.getJsonString(o);
+
+        mockServer
+                .when(
+                        request()
+                                .withPath("/addresses/3910")
                                 .withQueryStringParameter(new Parameter("format", "json"))
                                 .withMethod("GET"))
                 .respond(
