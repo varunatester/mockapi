@@ -21,6 +21,12 @@ test {
     useTestNG()
     scanForTestClasses = false //this one
 }
+
+tasks.withType(Test) {
+    gradle.startParameter.continueOnFailure = true
+    systemProperties = [env        : System.getProperty('env', 'local'),
+                        contentType: System.getProperty('contentType', 'application/json')]
+}
 dependencies {
     testCompile(group: 'org.testng', name: 'testng', version: '6.8.8')
     testCompile(group: 'com.jayway.restassured', name: 'rest-assured', version: '2.3.3')

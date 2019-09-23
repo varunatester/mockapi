@@ -1,8 +1,10 @@
 package utils;
 
 /**
- * Created by varuna on 8/20/15.
+ * Created by varuna on 8/20/19.
  */
 public class Properties {
-    public static final String addressUrl = "http://localhost:8080/addresses";
+    private static final PropertyReader propertiesReader = new PropertyReader();
+    public static final String addressUrl = propertiesReader.getAddressUrl();
 }
+
