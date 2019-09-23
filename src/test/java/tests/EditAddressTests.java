@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import requestBuilders.CreateAddressRequestBuilder;
 
 import static org.testng.Assert.assertNotEquals;
-import static org.testng.AssertJUnit.assertEquals;
 
 /**
  * Created by varuna on 8/20/15.

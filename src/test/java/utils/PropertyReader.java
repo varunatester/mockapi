@@ -1,4 +1,5 @@
 package utils;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -10,6 +11,7 @@ public class PropertyReader {
     public PropertyReader() {
         loadProperties();
     }
+
     private void loadProperties() {
         try {
             String env = System.getProperty("env");
@@ -21,20 +23,21 @@ public class PropertyReader {
             String propertiesFilePath = env + ".properties";
             InputStream inputStream =
                     this
-                    .getClass()
-                    .getClassLoader()
-                    .getResourceAsStream(propertiesFilePath);
+                            .getClass()
+                            .getClassLoader()
+                            .getResourceAsStream(propertiesFilePath);
             properties.load(inputStream);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public String readProperty(String key) {
+    private String readProperty(String key) {
         return properties.getProperty(key);
     }
+
     public String getAddressUrl() {
-        return properties.getProperty("addressUrl");
+        return readProperty("addressUrl");
     }
 }
 

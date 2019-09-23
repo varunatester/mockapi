@@ -8,9 +8,9 @@ import javax.xml.bind.Unmarshaller;
 import java.io.IOException;
 import java.io.StringReader;
 
-public class ResponseHelper {
+class ResponseHelper {
 
-    public static Object getResponseObject(String responseString, Class responseClass) throws IOException {
+    static Object getResponseObject(String responseString, Class responseClass) throws IOException {
         if (System.getProperty("Content-Type")!=null) {
             try {
                 final JAXBContext context = JAXBContext.newInstance(responseClass);

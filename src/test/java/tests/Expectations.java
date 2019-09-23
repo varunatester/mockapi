@@ -11,11 +11,11 @@ import static org.mockserver.model.HttpRequest.request;
 import static org.mockserver.model.HttpResponse.response;
 
 
-public class Expectations {
+class Expectations {
 
     private ClientAndServer mockServer;
 
-    public Expectations(ClientAndServer mockServer) {
+    Expectations(ClientAndServer mockServer) {
         this.mockServer = mockServer;
         setExpectations();
     }
@@ -129,7 +129,7 @@ public class Expectations {
                                 .withBody(responseString));
     }
 
-    public void expectationForCreateAddressJsonForDelete() {
+    private void expectationForCreateAddressJsonForDelete() {
         String responseString = "{\"addressId\":\"18\"}";
 
         mockServer
@@ -147,7 +147,7 @@ public class Expectations {
                                 .withBody(responseString));
     }
 
-    public void expectationForDeleteAddressJsonForDelete(String i) {
+    private void expectationForDeleteAddressJsonForDelete(String i) {
         String responseString = "{\"addressId\":\"" + i + "\"}";
 
         mockServer
