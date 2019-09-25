@@ -1,8 +1,6 @@
 package entities;
 
-
-public class CreateAddressResponse {
-
+public class EditAddressResponse {
     private String addressId;
 
     public String getAddressId() {
@@ -16,5 +14,9 @@ public class CreateAddressResponse {
 
     public GetAddressByIdResponse getAddressById() {
         return new GetAddressByIdResponse();
+    }
+
+    public DeleteAddressResponse deleteAddress() {
+        return new DeleteAddressResponse();
     }
 }

@@ -6,6 +6,7 @@ import entities.CreateAddressRequest;
 import entities.CreateAddressResponse;
 import entities.GetAddressByIdResponse;
 import org.testng.Reporter;
+import requestBuilders.CreateAddressRequestBuilder;
 
 import java.io.IOException;
 
@@ -20,6 +21,18 @@ public class AddressBaseTest extends TestBase {
 
     CreateAddressResponse addAddress(CreateAddressRequest request) throws IOException {
 
+        RequestSpecification specification = given().request().with()
+                .queryParam("format", "json")
+                .body(request);
+        Response response = specification.when().post(getConfiguration().getAddressUrl());
+        Reporter.log("AddAddress Response --- " + response.asString(), true);
+
+        return (CreateAddressResponse) ResponseHelper
+                .getResponseObject(response.asString(), CreateAddressResponse.class);
+
+    }
+    CreateAddressResponse addAddress() throws IOException {
+        CreateAddressRequest request = new CreateAddressRequestBuilder().build();
         RequestSpecification specification = given().request().with()
                 .queryParam("format", "json")
                 .body(request);

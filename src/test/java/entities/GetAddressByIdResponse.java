@@ -111,4 +111,8 @@ public class GetAddressByIdResponse {
         assertEquals(getLine2(),request.getLine2());
         assertEquals(getLine3(),request.getLine3());
     }
+
+    public EditAddressResponse editAddress() {
+        return new EditAddressResponse();
+    }
 }
