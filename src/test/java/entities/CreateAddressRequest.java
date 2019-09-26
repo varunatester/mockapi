@@ -1,7 +1,7 @@
 package entities;
 
 
-public abstract class CreateAddressRequest {
+public class CreateAddressRequest {
 
     private String title;
     private String firstName;
@@ -13,9 +13,9 @@ public abstract class CreateAddressRequest {
     private String line3;
     private String apartmentNo;
     public CreateAddressRequest() {
-
+        this.setTitle("Mrs");
     }
-    abstract public float  getShippingCharges();
+   // abstract public float  getShippingCharges();
 
 
     public String getTitle() {

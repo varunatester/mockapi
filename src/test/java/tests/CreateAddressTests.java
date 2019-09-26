@@ -7,12 +7,10 @@ import requestBuilders.CreateAddressRequestBuilder;
 import utils.Categories;
 
 import java.io.IOException;
-
 import static com.jayway.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.testng.Assert.assertNull;
 import static org.testng.AssertJUnit.assertNotNull;
-import static utils.Categories.SANITY;
+
 
 /**
  * Created by varuna on 8/20/15.

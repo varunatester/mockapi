@@ -1,7 +1,6 @@
 package requestBuilders;
-
 import entities.CreateAddressRequest;
-import entities.LocalAddress;
+
 
 /**
  * Created by varuna on 8/20/15.
@@ -11,7 +10,7 @@ public class CreateAddressRequestBuilder {
     CreateAddressRequest request;
 
     public CreateAddressRequestBuilder() {
-        request = new LocalAddress();
+        request = new CreateAddressRequest();
 
         request.setTitle("Mrs");
         request.setFirstName("Varuna");
