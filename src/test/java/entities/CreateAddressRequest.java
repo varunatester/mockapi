@@ -15,7 +15,12 @@ public class CreateAddressRequest {
     public CreateAddressRequest() {
         this.setTitle("Mrs");
     }
-   // abstract public float  getShippingCharges();
+
+    public CreateAddressRequest(String firstName, String lastName) {
+      this.setFirstName(firstName);
+      this.setLastName(lastName);
+    }
+    // abstract public float  getShippingCharges();
 
 
     public String getTitle() {

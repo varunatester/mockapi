@@ -1,7 +1,5 @@
 package requestBuilders;
 import entities.CreateAddressRequest;
-
-
 /**
  * Created by varuna on 8/20/15.
  */
