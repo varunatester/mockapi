@@ -10,8 +10,9 @@ public class CreateAddressBuilderPatternTests extends AddressBaseTest {
 
     @Test(groups = Categories.SANITY)
     public void shouldCreateAddress() throws IOException {
-        CreateAddressRequest request = new CreateAddressRequestBuilder()
-                .withApartmentNo("39")
+        CreateAddressRequest request =
+                new CreateAddressRequestBuilder()
+                .withFirstName("Jack").withLastName("John")
                 .build();
         addAddress(request);
     }
