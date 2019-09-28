@@ -19,7 +19,7 @@ import static utils.Configuration.getConfiguration;
  */
 public class AddressBaseTest extends TestBase {
 
-    CreateAddressResponse addAddress(CreateAddressRequest request) throws IOException {
+    protected CreateAddressResponse addAddress(CreateAddressRequest request) throws IOException {
 
         RequestSpecification specification = given().request().with()
                 .queryParam("format", "json")
@@ -31,7 +31,7 @@ public class AddressBaseTest extends TestBase {
                 .getResponseObject(response.asString(), CreateAddressResponse.class);
 
     }
-    CreateAddressResponse addAddress() throws IOException {
+    protected CreateAddressResponse addAddress() throws IOException {
         CreateAddressRequest request = new CreateAddressRequestBuilder().build();
         RequestSpecification specification = given().request().with()
                 .queryParam("format", "json")
