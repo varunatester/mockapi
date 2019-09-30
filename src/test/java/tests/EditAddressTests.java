@@ -2,6 +2,7 @@ package tests;
 
 import entities.CreateAddressRequest;
 import entities.CreateAddressResponse;
+import entities.EditAddressResponse;
 import entities.GetAddressByIdResponse;
 import org.testng.annotations.Test;
 import requestBuilders.CreateAddressRequestBuilder;
@@ -23,7 +24,7 @@ public class EditAddressTests extends AddressBaseTest{
                 .withFirstName("Star")
                 .withLastName("Canada").build();
 
-        CreateAddressResponse editAddressResponse = editAddress(editRequest, addressId);
+        EditAddressResponse editAddressResponse = editAddress(editRequest, addressId);
         String editedAddressId = editAddressResponse.getAddressId();
         assertNotEquals(editedAddressId, addressId);
 

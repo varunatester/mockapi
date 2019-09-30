@@ -1,7 +1,11 @@
 package entities;
 
 public class DeleteAddressResponse {
-    public void assertAddressIsDeleted() {
+    private String addressId;
+    public String getAddressId() {
+        return addressId;
+    }
 
+    public void assertAddressIsDeleted() {
     }
 }

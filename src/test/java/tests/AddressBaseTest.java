@@ -1,15 +1,10 @@
 package tests;
-
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
-import entities.CreateAddressRequest;
-import entities.CreateAddressResponse;
-import entities.GetAddressByIdResponse;
+import entities.*;
 import org.testng.Reporter;
 import requestBuilders.CreateAddressRequestBuilder;
-
 import java.io.IOException;
-
 import static com.jayway.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
 import static utils.Configuration.getConfiguration;
@@ -19,7 +14,7 @@ import static utils.Configuration.getConfiguration;
  */
 public class AddressBaseTest extends TestBase {
 
-    protected CreateAddressResponse addAddress(CreateAddressRequest request) throws IOException {
+     protected CreateAddressResponse addAddress(CreateAddressRequest request) throws IOException {
 
         RequestSpecification specification = given().request().with()
                 .queryParam("format", "json")
@@ -31,7 +26,7 @@ public class AddressBaseTest extends TestBase {
                 .getResponseObject(response.asString(), CreateAddressResponse.class);
 
     }
-    protected CreateAddressResponse addAddress() throws IOException {
+     CreateAddressResponse addAddress() throws IOException {
         CreateAddressRequest request = new CreateAddressRequestBuilder().build();
         RequestSpecification specification = given().request().with()
                 .queryParam("format", "json")
@@ -44,7 +39,7 @@ public class AddressBaseTest extends TestBase {
 
     }
 
-    GetAddressByIdResponse getAddressById(String addressId) throws IOException {
+     GetAddressByIdResponse getAddressById(String addressId) throws IOException {
 
         String url = getConfiguration().getAddressUrl() + "/" + addressId;
         RequestSpecification specification = given()
@@ -56,7 +51,7 @@ public class AddressBaseTest extends TestBase {
                 .getResponseObject(response.asString(), GetAddressByIdResponse.class);
     }
 
-    CreateAddressResponse editAddress(CreateAddressRequest editRequest, String addressId) throws IOException {
+    EditAddressResponse editAddress(CreateAddressRequest editRequest, String addressId) throws IOException {
         String url = getConfiguration().getAddressUrl()+ "/" + addressId;
         RequestSpecification specification = given().request().with()
                 .queryParam("format", "json")
@@ -64,11 +59,11 @@ public class AddressBaseTest extends TestBase {
         Response response = specification.when().put(url);
         Reporter.log("EditAddress Response --- " + response.asString(), true);
 
-        return (CreateAddressResponse) ResponseHelper
-                .getResponseObject(response.asString(), CreateAddressResponse.class);
+        return (EditAddressResponse) ResponseHelper
+                .getResponseObject(response.asString(), EditAddressResponse.class);
     }
 
-    CreateAddressResponse deleteAddress(String addressId) throws IOException {
+     DeleteAddressResponse deleteAddress(String addressId) throws IOException {
         String url = getConfiguration().getAddressUrl()+ "/" + addressId;
         RequestSpecification specification = given().request().with()
                 .queryParam("format", "json")
@@ -77,7 +72,7 @@ public class AddressBaseTest extends TestBase {
         Response response = specification.when().delete(url);
         Reporter.log("DeleteAddress Response --- " + response.asString(), true);
 
-        return (CreateAddressResponse) ResponseHelper
-                .getResponseObject(response.asString(), CreateAddressResponse.class);
+        return (DeleteAddressResponse) ResponseHelper
+                .getResponseObject(response.asString(), DeleteAddressResponse.class);
     }
 }

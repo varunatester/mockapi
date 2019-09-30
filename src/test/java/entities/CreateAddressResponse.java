@@ -1,6 +1,5 @@
 package entities;
 
-
 public class CreateAddressResponse {
 
     private String addressId;
@@ -9,12 +8,8 @@ public class CreateAddressResponse {
         return addressId;
     }
 
-    public void setAddressId(String addressId) {
-        this.addressId = addressId;
-    }
 
-
-    public GetAddressByIdResponse getAddressById() {
-        return new GetAddressByIdResponse();
+    public EditAddressResponse editAddress() {
+        return null;
     }
 }

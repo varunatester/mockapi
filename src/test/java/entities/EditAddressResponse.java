@@ -1,4 +1,5 @@
 package entities;
+import java.io.IOException;
 
 public class EditAddressResponse {
     private String addressId;
@@ -7,16 +8,7 @@ public class EditAddressResponse {
         return addressId;
     }
 
-    public void setAddressId(String addressId) {
-        this.addressId = addressId;
-    }
-
-
-    public GetAddressByIdResponse getAddressById() {
-        return new GetAddressByIdResponse();
-    }
-
-    public DeleteAddressResponse deleteAddress() {
-        return new DeleteAddressResponse();
+    public DeleteAddressResponse deleteAddress(String addressId) throws IOException {
+       return new DeleteAddressResponse();
     }
 }

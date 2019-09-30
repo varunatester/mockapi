@@ -3,8 +3,6 @@ import entities.CreateAddressRequest;
 import org.testng.annotations.Test;
 import utils.Categories;
 import java.io.IOException;
-import static com.jayway.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.notNullValue;
 
 public class CreateAddressValueObjectTests {
 
@@ -37,14 +35,6 @@ public class CreateAddressValueObjectTests {
     @Test(groups = Categories.SANITY)
     public void shouldCreateAddress() throws IOException {
         CreateAddressRequest request = createAddress(new CreateAddressRequest());
-        given().request().with()
-                .queryParam("format", "json")
-                .body(request)
-                .when()
-                .post("http://localhost:8080/addresses")
-                .then()
-                .assertThat()
-                .statusCode(201)
-                .body("addressId", notNullValue());
+        createAddress(request);
     }
 }

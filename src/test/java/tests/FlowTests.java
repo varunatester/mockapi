@@ -8,11 +8,9 @@ import java.io.IOException;
 public class FlowTests extends AddressBaseTest {
     @Test
     public void addEditGetDeleteAddress() throws IOException {
-
         addAddress()
-                .getAddressById()
                 .editAddress()
-                .deleteAddress()
+                .deleteAddress("11")
                 .assertAddressIsDeleted();
 
     }
