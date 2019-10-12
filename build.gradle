@@ -11,11 +11,13 @@ repositories {
 task SanityTests(type: Test) {
     dependsOn clean, compileTestJava
     useTestNG {
+        includeGroups 'Sanity'
         outputDirectory = file("$buildDir/SanityTestsResults")
         parallel = "classes"
         threadCount = 1
         useDefaultListeners = false
     }
+    scanForTestClasses = false
 }
 test {
     useTestNG()

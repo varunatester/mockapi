@@ -32,7 +32,7 @@ public class CreateAddressValueObjectTests {
         return request;
     }
 
-    @Test(groups = Categories.SANITY)
+    @Test
     public void shouldCreateAddress() throws IOException {
         CreateAddressRequest request = createAddress(new CreateAddressRequest());
         createAddress(request);
