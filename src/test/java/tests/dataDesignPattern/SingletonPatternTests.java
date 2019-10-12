@@ -1,9 +1,9 @@
-package tests;
+package tests.dataDesignPattern;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertSame;
 
-public class SingletonPatternTest {
+public class SingletonPatternTests {
     private static class SingletonClass {
         private static SingletonClass instance;
 
