@@ -8,12 +8,22 @@ import java.io.IOException;
 
 public class CreateAddressDataProviderPatternTests extends AddressBaseTest {
 
+    @Test(dataProviderClass= NameTestData.class,dataProvider = "nameTestData")
+    public void shouldCreateAddressWithMultiple(String firstName,String lastName) throws IOException {
+        CreateAddressRequest request =
+                new CreateAddressRequestBuilder()
+                        .withFirstName(firstName)
+                        .withLastName(lastName)
+                        .build();
+        addAddress(request);
+    }
     @Test(dataProviderClass= NameTestData.class,dataProvider = "nameTestData2")
     public void shouldCreateAddress(CreateAddressRequest addressRequest) throws IOException {
         CreateAddressRequest request =
                 new CreateAddressRequestBuilder()
-                .withFirstName(addressRequest.getFirstName()).withLastName(addressRequest.getLastName())
-                .build();
+                        .withFirstName(addressRequest.getFirstName())
+                        .withLastName(addressRequest.getLastName())
+                        .build();
         addAddress(request);
     }
 }
