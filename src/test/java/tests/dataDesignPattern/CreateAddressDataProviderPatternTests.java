@@ -9,7 +9,7 @@ import java.io.IOException;
 public class CreateAddressDataProviderPatternTests extends AddressBaseTest {
 
     @Test(dataProviderClass= NameTestData.class,dataProvider = "nameTestData")
-    public void shouldCreateAddressWithMultiple(String firstName,String lastName) throws IOException {
+    public void shouldCreateAddressWithMultipleNames(String firstName,String lastName) throws IOException {
         CreateAddressRequest request =
                 new CreateAddressRequestBuilder()
                         .withFirstName(firstName)
