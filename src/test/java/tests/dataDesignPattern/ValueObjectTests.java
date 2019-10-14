@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import utils.Categories;
 import java.io.IOException;
 
-public class CreateAddressValueObjectTests {
+public class ValueObjectTests {
 
     public CreateAddressRequest createAddress(String firstName, String lastName, String title,
                                               String apartmentNo, String line1, String city,

@@ -6,7 +6,7 @@ import tests.AddressBaseTest;
 import utils.NameTestData;
 import java.io.IOException;
 
-public class CreateAddressDataProviderPatternTests extends AddressBaseTest {
+public class DataProviderPatternTests extends AddressBaseTest {
 
     @Test(dataProviderClass= NameTestData.class,dataProvider = "nameTestData")
     public void shouldCreateAddressWithMultipleNames(String firstName,String lastName) throws IOException {

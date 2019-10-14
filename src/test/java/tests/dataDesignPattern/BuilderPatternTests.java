@@ -6,7 +6,7 @@ import requestBuilders.CreateAddressRequestBuilder;
 import utils.Categories;
 import java.io.IOException;
 
-public class CreateAddressBuilderPatternTests extends AddressBaseTest {
+public class BuilderPatternTests extends AddressBaseTest {
 
     @Test(groups = Categories.SANITY)
     public void shouldCreateAddress() throws IOException {
