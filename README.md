@@ -22,7 +22,7 @@ This project is to demonstrate creating a test framework for api using design pa
 
 **Assumption made**
 
-* As JourneyType was not mentioned in the questions list,First commit is only for OneWay Journey.
+* 
 
 **Notes**
 
