@@ -51,7 +51,7 @@ public class AddressBaseTest extends TestBase {
                 .getResponseObject(response.asString(), GetAddressByIdResponse.class);
     }
 
-    EditAddressResponse editAddress(CreateAddressRequest editRequest, String addressId) throws IOException {
+    public EditAddressResponse editAddress(CreateAddressRequest editRequest, String addressId) throws Exception {
         String url = getConfiguration().getAddressUrl()+ "/" + addressId;
         RequestSpecification specification = given().request().with()
                 .queryParam("format", "json")

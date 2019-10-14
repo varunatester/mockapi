@@ -1,5 +1,8 @@
 package entities;
 
+import requestBuilders.CreateAddressRequestBuilder;
+import tests.AddressBaseTest;
+
 public class CreateAddressResponse {
 
     private String addressId;
@@ -9,7 +12,8 @@ public class CreateAddressResponse {
     }
 
 
-    public EditAddressResponse editAddress() {
-        return null;
+    public EditAddressResponse editAddressWithId(String addressId) throws Exception {
+        CreateAddressRequest request = new CreateAddressRequestBuilder().withFirstName("Star").withLastName("Canada").build();
+        return new AddressBaseTest().editAddress(request,addressId);
     }
 }

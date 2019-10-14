@@ -1,16 +1,15 @@
 package tests;
-
 import org.testng.annotations.Test;
-import java.io.IOException;
+
 
 
 public class FlowTests extends AddressBaseTest {
     @Test
-    public void addEditGetDeleteAddress() throws IOException {
+    public void addEditGetDeleteAddress() throws Exception {
         addAddress()
-                .editAddress()
-                .deleteAddress("1");
-                //.assertAddressIsDeleted();
+                .editAddressWithId("1")
+                .deleteAddress("1")
+                .assertAddressIsDeleted();
 
     }
 }
