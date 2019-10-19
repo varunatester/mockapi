@@ -11,7 +11,9 @@ This project is to demonstrate creating a test framework for api using design pa
 
 **Prerequisties:**
 
- * Java 1.8 or above
+ * Java 8 or above
+ * Git
+ * Any IDE (Intellij)
  * Install lombok plugin to run tests from Intellij and enable annotation processor
  "Settings > Build > Compiler > Annotation Processors"
 
