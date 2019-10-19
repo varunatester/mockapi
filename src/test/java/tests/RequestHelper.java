@@ -2,7 +2,6 @@ package tests;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
-
 import java.io.IOException;
 
 public class RequestHelper {

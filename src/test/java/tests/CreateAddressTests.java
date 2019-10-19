@@ -5,7 +5,6 @@ import entities.CreateAddressResponse;
 import org.testng.annotations.Test;
 import requestBuilders.CreateAddressRequestBuilder;
 import utils.Categories;
-
 import java.io.IOException;
 import static com.jayway.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -31,7 +30,6 @@ public class CreateAddressTests extends AddressBaseTest{
 
     @Test(groups = Categories.SANITY)
     public void shouldCreateAddressAfterRefactoring() throws IOException {
-
         CreateAddressRequest request = new CreateAddressRequestBuilder().withFirstName("Jarod").build();
         CreateAddressResponse addAddressResponse = addAddress(request);
         assertNotNull(addAddressResponse.getAddressId());

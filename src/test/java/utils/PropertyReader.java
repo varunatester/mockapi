@@ -6,7 +6,6 @@ import java.util.Properties;
 
 public class PropertyReader {
     Properties properties = new Properties();
-    InputStream inputStream = null;
 
     public PropertyReader() {
         loadProperties();

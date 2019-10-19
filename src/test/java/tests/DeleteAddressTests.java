@@ -1,9 +1,7 @@
 package tests;
-
 import entities.CreateAddressRequest;
 import org.testng.annotations.Test;
 import requestBuilders.CreateAddressRequestBuilder;
-
 import static org.testng.Assert.assertEquals;
 
 /**

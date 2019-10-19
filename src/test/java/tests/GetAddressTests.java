@@ -5,11 +5,9 @@ import entities.CreateAddressResponse;
 import entities.GetAddressByIdResponse;
 import org.testng.annotations.Test;
 import requestBuilders.CreateAddressRequestBuilder;
-
 import java.io.IOException;
-
 import static org.testng.Assert.assertEquals;
-import static org.testng.AssertJUnit.assertNotNull;
+import static org.testng.Assert.assertNotNull;
 
 /**
  * Created by varuna on 8/20/15.

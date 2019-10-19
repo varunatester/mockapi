@@ -1,8 +1,6 @@
 package tests;
 import org.testng.annotations.Test;
 
-
-
 public class FlowTests extends AddressBaseTest {
     @Test
     public void addEditGetDeleteAddress() throws Exception {

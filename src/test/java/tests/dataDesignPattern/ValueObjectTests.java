@@ -1,7 +1,6 @@
 package tests.dataDesignPattern;
 import entities.CreateAddressRequest;
 import org.testng.annotations.Test;
-import utils.Categories;
 import java.io.IOException;
 
 public class ValueObjectTests {

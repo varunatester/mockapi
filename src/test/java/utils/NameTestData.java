@@ -23,7 +23,7 @@ public class NameTestData {
                 new Object[]{new CreateAddressRequest("Alice", "Smith")},
                 new Object[]{ new CreateAddressRequest("John", "Singh")},
                 new Object[]{new CreateAddressRequest("Sam", "Raj")},
-                new Object[]{ new CreateAddressRequest("Mary", "Lu")}
+                new Object[]{ new CreateAddressRequest("Mary", "Ali")}
         ).iterator();
     }
 }

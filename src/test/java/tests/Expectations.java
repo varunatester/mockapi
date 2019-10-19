@@ -3,9 +3,7 @@ package tests;
 import org.mockserver.integration.ClientAndServer;
 import org.mockserver.model.Header;
 import org.mockserver.model.Parameter;
-
 import java.io.File;
-
 import static com.jayway.restassured.path.json.JsonPath.from;
 import static org.mockserver.model.HttpRequest.request;
 import static org.mockserver.model.HttpResponse.response;

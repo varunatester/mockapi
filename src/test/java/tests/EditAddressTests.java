@@ -1,12 +1,12 @@
 package tests;
 
 import entities.CreateAddressRequest;
-import entities.CreateAddressResponse;
 import entities.EditAddressResponse;
 import entities.GetAddressByIdResponse;
 import org.testng.annotations.Test;
 import requestBuilders.CreateAddressRequestBuilder;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotEquals;
 
 /**
@@ -31,15 +31,13 @@ public class EditAddressTests extends AddressBaseTest{
         GetAddressByIdResponse getAddressResponse = getAddressById(editedAddressId);
         getAddressResponse.assertAddress(editRequest);
 
-//        assertEquals(getAddressResponse.getAddressId(), editAddressResponse.getAddressId());
-//        assertEquals(getAddressResponse.getFirstName(), editRequest.getFirstName());
-//        assertEquals(getAddressResponse.getLastName(), editRequest.getLastName());
-//        assertEquals(getAddressResponse.getTitle(), editRequest.getTitle());
-//        assertEquals(getAddressResponse.getLine1(), editRequest.getLine1());
-//        assertEquals(getAddressResponse.getLine2(), editRequest.getLine2());
-//        assertEquals(getAddressResponse.getCity(), editRequest.getCity());
-//        assertEquals(getAddressResponse.getState(), editRequest.getState());
-
-
+        assertEquals(getAddressResponse.getAddressId(), editAddressResponse.getAddressId());
+        assertEquals(getAddressResponse.getFirstName(), editRequest.getFirstName());
+        assertEquals(getAddressResponse.getLastName(), editRequest.getLastName());
+        assertEquals(getAddressResponse.getTitle(), editRequest.getTitle());
+        assertEquals(getAddressResponse.getLine1(), editRequest.getLine1());
+        assertEquals(getAddressResponse.getLine2(), editRequest.getLine2());
+        assertEquals(getAddressResponse.getCity(), editRequest.getCity());
+        assertEquals(getAddressResponse.getState(), editRequest.getState());
     }
 }
