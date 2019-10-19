@@ -35,10 +35,14 @@ This project is to demonstrate creating a test framework for api using design pa
 **How to run test:**
 
 * Run tests through IDE :
-       1. Right click the *Tests file and run. This will run all the tests in the file.
-       2. Run specific annotated scenario : Navigate to SanityTests task in build.gradle right pane and double click the task.
+       1.open mockapi.ipr  
+       2. Right click the *Tests file and run. This will run all the tests in the file.
+       3. Run specific annotated scenario : Navigate to SanityTests task in build.gradle right pane 
+       and double click the task.
+	   4. ./gradlew test or ./gradlew SanityTests
 
 * Run tests through command line :
      1.Go to folder location where code is checkout, Run the test using command :gradle SanityTests.
+     
 * Check Reports :
      1.Reports can be seen under mockapi/build/reports/tests/SanityTests/index.html
