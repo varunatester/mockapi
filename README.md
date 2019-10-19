@@ -25,6 +25,8 @@ This project is to demonstrate creating a test framework for api using design pa
 **Set up**
 
 * ./gradlew test
+* ./gradlew eclipse
+* ./gradlew cleaneclipse
 
 **Notes**
 
