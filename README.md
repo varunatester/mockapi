@@ -20,9 +20,9 @@ This project is to demonstrate creating a test framework for api using design pa
 
 * Tested on platform Mac 10.14.6
 
-**Assumption made**
+**Set up**
 
-* 
+* ./gradlew test
 
 **Notes**
 
