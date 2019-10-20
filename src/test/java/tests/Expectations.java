@@ -23,7 +23,9 @@ class Expectations {
         expectationForGetAddressJson();
         expectationForEditAddressJson();
         expectationForGetAddressJsonAfterEdit();
+        expectationForGetAddressJsonAfterDelete();
         expectationForCreateAddressJsonForDelete();
+        expectationForDeleteAddressJsonForDelete("18");
         expectationForDeleteAddressJsonForDelete("1");
         expectationForGetAddressByApartmentNo();
 
@@ -96,6 +98,23 @@ class Expectations {
                 .when(
                         request()
                                 .withPath("/addresses/11")
+                                .withQueryStringParameter(new Parameter("format", "json"))
+                                .withMethod("GET"))
+                .respond(
+                        response()
+                                .withStatusCode(200)
+                                .withHeaders(
+                                        new Header("Content-Type", "application/json")
+                                )
+                                .withBody(responseString));
+    }
+    private void expectationForGetAddressJsonAfterDelete() {
+        String responseString = "{\"message\":\"Address doesn't exist\"}";
+
+        mockServer
+                .when(
+                        request()
+                                .withPath("/addresses/18")
                                 .withQueryStringParameter(new Parameter("format", "json"))
                                 .withMethod("GET"))
                 .respond(

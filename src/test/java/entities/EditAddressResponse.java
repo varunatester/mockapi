@@ -1,4 +1,6 @@
 package entities;
+import tests.AddressBaseTest;
+
 import java.io.IOException;
 
 public class EditAddressResponse {
@@ -9,6 +11,6 @@ public class EditAddressResponse {
     }
 
     public DeleteAddressResponse deleteAddress(String addressId) throws IOException {
-       return new DeleteAddressResponse();
+        return new AddressBaseTest().deleteAddress(addressId);
     }
 }

@@ -21,6 +21,7 @@ public class GetAddressByIdResponse {
     private String line1;
     private String line2;
     private String line3;
+    private String message;
 
     public String getLine3() {
         return line3;
@@ -101,7 +102,13 @@ public class GetAddressByIdResponse {
     public void setApartmentNo(String apartmentNo) {
         this.apartmentNo = apartmentNo;
     }
+    public String getMessage() {
+        return message;
+    }
 
+    public void setMessage(String message) {
+        this.message = message;
+    }
     public void assertAddress(CreateAddressRequest request) {
         assertEquals(getFirstName(),request.getFirstName());
         assertEquals(getLastName(),request.getLastName());

@@ -26,7 +26,7 @@ public class AddressBaseTest extends TestBase {
                 .getResponseObject(response.asString(), CreateAddressResponse.class);
 
     }
-     CreateAddressResponse addAddress() throws IOException {
+     protected CreateAddressResponse addAddress() throws IOException {
         CreateAddressRequest request = new CreateAddressRequestBuilder().build();
         RequestSpecification specification = given().request().with()
                 .queryParam("format", "json")
@@ -39,7 +39,7 @@ public class AddressBaseTest extends TestBase {
 
     }
 
-     GetAddressByIdResponse getAddressById(String addressId) throws IOException {
+     public GetAddressByIdResponse getAddressById(String addressId) throws IOException {
 
         String url = getConfiguration().getAddressUrl() + "/" + addressId;
         RequestSpecification specification = given()
@@ -63,7 +63,7 @@ public class AddressBaseTest extends TestBase {
                 .getResponseObject(response.asString(), EditAddressResponse.class);
     }
 
-     DeleteAddressResponse deleteAddress(String addressId) throws IOException {
+    public DeleteAddressResponse deleteAddress(String addressId) throws IOException {
         String url = getConfiguration().getAddressUrl()+ "/" + addressId;
         RequestSpecification specification = given().request().with()
                 .queryParam("format", "json")
