@@ -2,7 +2,7 @@ package tests.structuralDesignPattern;
 import org.testng.annotations.Test;
 import tests.AddressBaseTest;
 
-public class FlowTests extends AddressBaseTest {
+public class ChainOfInvocationTests extends AddressBaseTest {
     @Test
     public void addEditGetDeleteAddress() throws Exception {
         addAddress()
