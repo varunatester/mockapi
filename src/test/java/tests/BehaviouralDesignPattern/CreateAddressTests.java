@@ -1,9 +1,10 @@
-package tests;
+package tests.BehaviouralDesignPattern;
 
 import entities.CreateAddressRequest;
 import entities.CreateAddressResponse;
 import org.testng.annotations.Test;
 import requestBuilders.CreateAddressRequestBuilder;
+import tests.AddressBaseTest;
 import utils.Categories;
 import java.io.IOException;
 import static com.jayway.restassured.RestAssured.given;
@@ -14,7 +15,7 @@ import static org.testng.AssertJUnit.assertNotNull;
 /**
  * Created by varuna on 8/20/15.
  */
-public class CreateAddressTests extends AddressBaseTest{
+public class CreateAddressTests extends AddressBaseTest {
     @Test
     public void shouldCreateAddress() {
         given().request().with()
