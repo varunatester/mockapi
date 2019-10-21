@@ -28,12 +28,9 @@ public class CreateAddressTests extends AddressBaseTest {
                 .statusCode(201)
                 .body("addressId", notNullValue());
     }
-
     @Test(groups = Categories.SANITY)
-    public void shouldCreateAddressAfterRefactoring() throws IOException {
-        CreateAddressRequest request = new CreateAddressRequestBuilder().withFirstName("Jarod").build();
-        CreateAddressResponse addAddressResponse = addAddress(request);
-        assertNotNull(addAddressResponse.getAddressId());
+   public void refactoredTests() {
+        //createAddress
+        //assertAddress is created
     }
-
 }
