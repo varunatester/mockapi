@@ -1,4 +1,4 @@
-package tests.BehaviouralDesignPattern;
+package tests.behaviouralDesignPattern;
 
 import entities.CreateAddressRequest;
 import entities.CreateAddressResponse;
