@@ -20,8 +20,6 @@ public class CreateAddressRequest {
       this.setFirstName(firstName);
       this.setLastName(lastName);
     }
-    // abstract public float  getShippingCharges();
-
 
     public String getTitle() {
         return title;

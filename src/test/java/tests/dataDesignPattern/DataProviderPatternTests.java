@@ -19,11 +19,7 @@ public class DataProviderPatternTests extends AddressBaseTest {
     }
     @Test(dataProviderClass= NameTestData.class,dataProvider = "nameTestData2")
     public void shouldCreateAddress(CreateAddressRequest addressRequest) throws IOException {
-        CreateAddressRequest request =
-                new CreateAddressRequestBuilder()
-                        .withFirstName(addressRequest.getFirstName())
-                        .withLastName(addressRequest.getLastName())
-                        .build();
-        addAddress(request);
+        //TODO: DataProvider with an object
+
     }
 }

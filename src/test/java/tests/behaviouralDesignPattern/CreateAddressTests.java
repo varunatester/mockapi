@@ -30,7 +30,6 @@ public class CreateAddressTests extends AddressBaseTest {
     }
     @Test(groups = Categories.SANITY)
    public void refactoredTests() {
-        //createAddress
-        //assertAddress is created
+        //TODO: Create address and assert address is created
     }
 }

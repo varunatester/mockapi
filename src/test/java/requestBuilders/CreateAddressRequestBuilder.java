@@ -9,14 +9,12 @@ public class CreateAddressRequestBuilder {
 
     public CreateAddressRequestBuilder() {
         request = new CreateAddressRequest();
-
         request.setTitle("Mrs");
         request.setFirstName("Varuna");
         request.setLastName("Srivastava");
-
         request.setLine1("300 Front St West");
         request.setLine2("Blue building");
-        request.setLine3("Box");
+
         request.setCity("Toronto");
         request.setState("Ontario");
     }
